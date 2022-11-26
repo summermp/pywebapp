@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>    
+    <title>First web app</title>
+    <py-env>
+        - pandas
+        - numpy
+     </py-env>
+</head>
+<body>
+<center>
+    <h4>WEB APLICATION WITH PYTHON</h4>
+    <py-script>
+        #Python code goes here
+        import pandas as pd
+        people_dict = {
+        "weight": pd.Series([68, 83, 112],index=["alice", "bob", "charles"]), 
+        "birthyear": pd.Series([1984, 1985, 1992], index=["bob", "alice", "charles"], name="year"),
+        "children": pd.Series([0, 3], index=["charles", "bob"]),
+        "hobby": pd.Series(["Biking", "Dancing"], index=["alice", "bob"]),}
+        people = pd.DataFrame(people_dict)
+        people.head()
+    </py-script>
+</center>
+</body>
+</html>
